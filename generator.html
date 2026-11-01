@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Modul Ajar IPA Fase D KBC</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f2f4f4; color: #333; padding: 20px; }
+        .header-banner { background-color: #0b5345; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header-banner h1 { font-size: 24px; text-transform: uppercase; }
+        .header-banner p { font-size: 14px; color: #f4d03f; margin-top: 5px; }
+        .container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .panel { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .panel-title { font-size: 18px; font-weight: bold; color: #0b5345; margin-bottom: 20px; border-bottom: 2px solid #e5e8e8; padding-bottom: 8px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; color: #4d5656; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #bdc3c7; border-radius: 4px; font-size: 14px; }
+        .modul-list { display: flex; flex-direction: column; gap: 12px; max-height: 400px; overflow-y: auto; padding-right: 10px; }
+        .modul-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px; background: #f8f9f9; border-radius: 4px; border-left: 4px solid #bdc3c7; transition: all 0.2s; }
+        .modul-item.active { border-left-color: #117a65; background: #e8f8f5; }
+        .modul-item input[type="radio"] { margin-top: 3px; cursor: pointer; }
+        .modul-item label { cursor: pointer; font-size: 14px; font-weight: 500; line-height: 1.4; }
+        .btn-generate { width: 100%; background: #0b5345; color: white; border: none; padding: 14px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; text-transform: uppercase; margin-top: 20px; transition: background 0.2s; }
+        .btn-generate:hover { background: #117a65; }
+        .preview-box { border: 2px dashed #bdc3c7; border-radius: 6px; padding: 20px; min-height: 400px; background: #fafafa; font-size: 14px; line-height: 1.6; white-space: pre-wrap; }
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>Generator Modul Ajar IPA Fase D KBC</h1>
+        <p>Penyusun modul ajar IPA otomatis terintegrasi identitas guru, sekolah, dan kurikulum berbasis KBC (Panca Cinta)</p>
+    </div>
+
+    <div class="container">
+        <!-- PANEL KIRI: FORM IDENTITAS & PILIHAN -->
+        <div class="panel">
+            <div class="panel-title">1. Identitas Perangkat</div>
+            <div class="form-group">
+                <label>Nama Guru (beserta gelar)</label>
+                <input type="text" id="namaGuru" value="Epen Supendi, S.Pd.">
+            </div>
+            <div class="form-group">
+                <label>Nama Kepala Madrasah</label>
+                <input type="text" id="namaKepsek" value="Rita Oktavia, S.Pd.">
+            </div>
+            <div class="form-group">
+                <label>Nama Madrasah / Sekolah</label>
+                <input type="text" id="namaSekolah" value="MTs Pamuruyan Cibadak">
+            </div>
+            <div class="form-group">
+                <label>Tahun Pelajaran</label>
+                <select id="tahunPelajaran">
+                    <option value="2026/2027" selected>2026/2027</option>
+                    <option value="2027/2028">2027/2028</option>
+                    <option value="2028/2029">2028/2029</option>
+                </select>
+            </div>
+
+            <div class="panel-title" style="margin-top: 25px;">2. Pilih Materi Modul Ajar</div>
+            <div class="modul-list">
+                <div class="modul-item active">
+                    <input type="radio" id="m1" name="pilihModul" value="hakikat_sains" checked>
+                    <label for="m1"><strong>Kelas VII</strong> - Bab 1: Hakikat Sains dan Metode Ilmiah</label>
+                </div>
+                <div class="modul-item">
+                    <input type="radio" id="m2" name="pilihModul" value="zat_karakteristik">
+                    <label for="m2"><strong>Kelas VII</strong> - Bab 2: Zat, Wujud Zat, dan Perubahannya</label>
+                </div>
+                <div class="modul-item">
+                    <input type="radio" id="m3" name="pilihModul" value="sel_mikroskop">
+                    <label for="m3"><strong>Kelas VIII</strong> - Bab 1: Pengenalan Sel dan Penggunaan Mikroskop</label>
+                </div>
+                <div class="modul-item">
+                    <input type="radio" id="m4" name="pilihModul" value="sistem_pencernaan">
+                    <label for="m4"><strong>Kelas VIII</strong> - Bab 1: Struktur Fungsi Organ Sistem Pencernaan</label>
+                </div>
+                <div class="modul-item">
+                    <input type="radio" id="m5" name="pilihModul" value="mitosis_sel">
+                    <label for="m5"><strong>Kelas IX</strong> - Bab 1: Sistem Pembelahan Sel Secara Mitosis & Meiosis</label>
+                </div>
+            </div>
+
+            <button class="btn-generate" onclick="generateModul()">Buat & Pratinjau Modul</button>
+        </div>
+
+        <!-- PANEL KANAN: PRATINJAU HASIL GENERATE -->
+        <div class="panel">
+            <div class="panel-title">3. Pratinjau Hasil Dokumen</div>
+            <div id="preview" class="preview-box">Klik tombol di sebelah kiri untuk menampilkan draf dokumen...</div>
+            <button class="btn-generate" style="background:#2e4053; margin-top:15px;" onclick="downloadDocx()">Unduh File Word (.doc)</button>
+        </div>
+    </div>
+
+    <script>
+        // Database Bank Data Materi Pembelajaran IPA KBC
+        const databaseMateri = {
+            hakikat_sains: {
+                judul: "Bab 1 - Hakikat Sains dan Metode Ilmiah",
+                kelas: "VII (Tujuh) / Semester 1",
+                cp: "Peserta didik mampu menerapkan metode ilmiah untuk merancang, melaksanakan, dan melaporkan penyelidikan ilmiah secara mandiri.",
+                kbc: "1. Cinta kepada Allah & Rasul: Mengagumi keteraturan hukum alam ciptaan-Nya.\n2. Cinta kepada Ilmu: Menumbuhkan semangat inkuiri dan rasa ingin tahu tinggi.\n3. Cinta kepada Lingkungan: Menerapkan prosedur keselamatan kerja di laboratorium.",
+                inti: "1. Siswa dibagi dalam kelompok kerja kolaboratif.\n2. Siswa melakukan praktikum pengukuran zat cair menggunakan gelas ukur dengan jujur.\n3. Siswa merapikan dan membersihkan kembali alat praktikum sebagai wujud kepedulian lingkungan."
+            },
+            zat_karakteristik: {
+                judul: "Bab 2 - Zat dan Karakteristiknya",
+                kelas: "VII (Tujuh) / Semester 1",
+                cp: "Peserta didik mampu membedakan karakteristik zat padat, cair, dan gas serta memahami perubahan fisika dan kimia.",
+                kbc: "1. Cinta kepada Ilmu: Menganalisis kerapatan partikel zat di alam sekitar.\n2. Cinta kepada Lingkungan: Memanfaatkan daur ulang materi limbah padat di sekitar madrasah.",
+                inti: "1. Guru mendemonstrasikan perubahan wujud zat cair menjadi gas.\n2. Siswa berdiskusi mengenai anomali air sebagai bentuk kebesaran penciptaan alam."
+            },
+            sel_mikroskop: {
+                judul: "Bab 1 - Pengenalan Sel dan Mikroskop",
+                kelas: "VIII (Delapan) / Semester 1",
+                cp: "Peserta didik mendeskripsikan struktur sel serta mampu menggunakan mikroskop untuk mengamati sel hewan/tumbuhan.",
+                kbc: "1. Cinta kepada Allah & Rasul: Mengagumi kebesaran Allah melalui unit kehidupan terkecil yang tak kasat mata.\n2. Cinta kepada Ilmu: Berlatih fokus dan sabar mencari fokus lensa mikroskop.",
+                inti: "1. Siswa membuat preparat basah dari bawang merah.\n2. Siswa mengamati dinding sel tumbuhan di bawah mikroskop secara bergantian secara tertib."
+            }
+        };
+
+        // Fungsi memperbarui visual pilihan aktif
+        document.querySelectorAll('input[name="pilihModul"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.modul-item').forEach(item => item.classList.remove('active'));
+                this.parentElement.classList.add('active');
+            });
+        });
+
+        // Fungsi utama Generate teks Modul Ajar secara dinamis
+        function generateText() {
+            const namaGuru = document.getElementById('namaGuru').value;
+            const namaKepsek = document.getElementById('namaKepsek').value;
+            const namaSekolah = document.getElementById('namaSekolah').value;
+            const tahunPel = document.getElementById('tahunPelajaran').value;
+            const keyMateri = document.querySelector('input[name="pilihModul"]:checked').value;
+
+            const data = databaseMateri[keyMateri] || databaseMateri.hakikat_sains;
+
+            return `MODUL AJAR KURIKULUM MERDEKA TERINTEGRASI KBC
+Mata Pelajaran  : Ilmu Pengetahuan Alam (IPA)
+Instansi        : ${namaSekolah}
+Tahun Pelajaran : ${tahunPel}
+Guru Mata Pelajar: ${namaGuru}
+
+==================================================
+STRUKTUR MODUL: ${data.judul}
+Kelas / Fase    : Kelas ${data.kelas}
+==================================================
+
+I. CAPAIAN PEMBELAJARAN:
+${data.cp}
+
+II. INTEGRASI PANCA CINTA (KBC):
+${data.kbc}
+
+III. KEGIATAN INTI PEMBELAJARAN:
+${data.inti}
+
+IV. PENGESAHAN PERANGKAT:
+Mengetahui,                                 Sukabumi, .................... 2026
+Kepala Madrasah                             Guru Mata Pelajaran IPA
+
+
