@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Berbagi Perangkat KBM IPA - Epen Supendi, S.Pd.</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f7f9fa; color: #333; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .running-text-container { width: 100%; background-color: #0b5345; color: #f4d03f; padding: 12px 0; font-weight: bold; font-size: 14px; overflow: hidden; white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .running-text { display: inline-block; padding-left: 100%; animation: marquee 25s linear infinite; }
+        @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+        .main-container { max-width: 900px; width: 90%; text-align: center; margin: 50px 0; }
+        .profile-frame { display: inline-block; position: relative; margin-bottom: 25px; }
+        .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #0b5345; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .title { color: #0b5345; font-size: 28px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; line-height: 1.3; }
+        .subtitle { color: #566573; font-size: 16px; margin-bottom: 45px; font-weight: 500; }
+        .access-box { background-color: #ffffff; border-left: 6px solid #0b5345; border-radius: 8px; padding: 35px 25px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); text-align: left; }
+        .access-title { font-size: 18px; font-weight: bold; color: #0b5345; margin-bottom: 25px; border-bottom: 2px solid #eaeded; padding-bottom: 10px; }
+        .button-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .door-btn { background-color: #0b5345; color: #ffffff; text-decoration: none; text-align: center; padding: 18px; border-radius: 6px; font-weight: bold; font-size: 16px; transition: all 0.3s ease; box-shadow: 0 3px 6px rgba(0,0,0,0.1); text-transform: uppercase; display: flex; align-items: center; justify-content: center; }
+        .door-btn:hover { background-color: #117a65; transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+        @media (max-width: 600px) { .button-grid { grid-template-columns: 1fr; } .title { font-size: 22px; } }
+    </style>
+</head>
+<body>
+
+    <div class="running-text-container">
+        <div class="running-text">
+            Selamat Datang di Media Berbagi Oleh Epen Supendi, S.Pd. TENDIK MTs Pamuruyan Cibadak-Sukabumi JABAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Selamat Datang di Media Berbagi Oleh Epen Supendi, S.Pd. TENDIK MTs Pamuruyan Cibadak-Sukabumi JABAR
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="profile-frame">
+            <!-- Sudah disesuaikan ke foto-profil.jpeg sesuai gambar komputer Anda -->
+            <img src="foto-profil.jpeg" alt="Epen Supendi, S.Pd." class="profile-img">
+        </div>
+
+        <h1 class="title">Perangkat Kegiatan Belajar Mengajar</h1>
+        <p class="subtitle">Pusat Unduhan Modul Ajar dan Administrasi Guru Kurikulum Merdeka dan PANCA CINTA (KBC)</p>
+
+        <div class="access-box">
+            <h2 class="access-title">Pintu Akses Unduhan Berkas Perangkat IPA</h2>
+            <div class="button-grid">
+                <!-- Diarahkan ke file lokal masing-masing pintu -->
+                <a href="kemenag.html" class="door-btn">A. Kemenag (KBC)</a>
+                <a href="kemendikdasmen.html" class="door-btn">B. Kemendikdasmen</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
